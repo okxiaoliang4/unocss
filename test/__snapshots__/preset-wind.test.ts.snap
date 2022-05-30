@@ -51,10 +51,18 @@ exports[`preset-wind > targets 1`] = `
 .table-row-group{display:table-row-group;}
 .border-collapse{border-collapse:collapse;}
 .border-separate{border-collapse:separate;}
-.border-spacing-\\\\[3px\\\\]{border-spacing:3px;}
-.border-spacing-\\\\$var{border-spacing:var(--var);}
+.border-spacing-\\\\[3px\\\\],
+.border-spacing-\\\\$var,
 .border-spacing-0,
-.border-spacing-none{border-spacing:0rem;}
+.border-spacing-none,
+.border-spacing-x-\\\\[3px\\\\],
+.border-spacing-y-\\\\$var{--un-border-spacing-x:0;--un-border-spacing-y:0;}
+.border-spacing-\\\\[3px\\\\]{--un-border-spacing-x:3px;--un-border-spacing-y:3px;border-spacing:var(--un-border-spacing-x) var(--un-border-spacing-y);}
+.border-spacing-\\\\$var{--un-border-spacing-x:var(--var);--un-border-spacing-y:var(--var);border-spacing:var(--un-border-spacing-x) var(--un-border-spacing-y);}
+.border-spacing-0,
+.border-spacing-none{--un-border-spacing-x:0rem;--un-border-spacing-y:0rem;border-spacing:var(--un-border-spacing-x) var(--un-border-spacing-y);}
+.border-spacing-x-\\\\[3px\\\\]{--un-border-spacing-x:3px;border-spacing:var(--un-border-spacing-x) var(--un-border-spacing-y);}
+.border-spacing-y-\\\\$var{--un-border-spacing-y:var(--var);border-spacing:var(--un-border-spacing-x) var(--un-border-spacing-y);}
 .caption-top{caption-side:top;}
 .caption-bottom{caption-side:bottom;}
 .table-auto{table-layout:auto;}
